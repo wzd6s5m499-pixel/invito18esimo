@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invito 18 Giuseppe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Montserrat', sans-serif; background: #000; color: white; overflow: hidden; }
+        
+        .wrapper {
+            height: 100vh;
+            background: 
+                radial-gradient(circle at top, rgba(0, 150, 100, 0.6) 0%, transparent 60%),
+                radial-gradient(circle at bottom, rgba(0, 150, 100, 0.6) 0%, transparent 60%),
+                url('https://www.transparenttextures.com/patterns/stardust.png');
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra verticalmente gli elementi */
+            align-items: center;
+            text-align: center;
+            padding: 10px 20px; /* Ridotto il padding superiore/inferiore */
+            box-sizing: border-box;
+        }
+
+        /* Ridotto il margine superiore del numero 18 */
+        .numero-18 { font-size: 110px; font-weight: bold; margin-top: -10px; line-height: 0.8; background: linear-gradient(#ffffff, #b0b0b0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 15px rgba(255,255,255,0.5)); }
+        .eighteen { font-family: 'Great Vibes', cursive; font-size: 38px; color: white; margin-top: -15px; margin-bottom: 20px; }
+
+        .subtitle { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; opacity: 0.8; }
+        .nome { font-family: 'Great Vibes', cursive; font-size: 65px; margin: 5px 0; color: #fff; text-shadow: 0 0 20px rgba(0, 255, 150, 0.5); }
+
+        .details-row { display: flex; align-items: center; justify-content: center; gap: 15px; width: 90%; max-width: 350px; margin: 10px 0; border-top: 1px solid rgba(255,255,255,0.5); border-bottom: 1px solid rgba(255,255,255,0.5); padding: 10px 0; }
+        .details-row span { font-size: 16px; font-weight: 300; }
+        .big-date { font-size: 45px; color: #a3ffdc; font-weight: 600; }
+
+        .year { margin-top:-5px; font-size: 14px; letter-spacing: 2px; }
+
+        .waiting { font-family: 'Great Vibes', cursive; font-size: 30px; color: #a3ffdc; margin-top: 10px; }
+
+        /* Area pulsanti alzata */
+        .btn-box { display: flex; gap: 10px; margin-top: 25px; width: 100%; max-width: 360px; }
+        .btn {
+            flex: 1;
+            padding: 15px 5px;
+            border-radius: 40px;
+            background: rgba(163, 255, 220, 0.15);
+            border: 2px solid #a3ffdc;
+            color: white;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            backdrop-filter: blur(8px);
+            transition: 0.3s;
+        }
+        .btn:active { transform: scale(0.95); background: rgba(163, 255, 220, 0.3); }
+        .btn span { font-weight: normal; font-size: 8px; opacity: 0.9; text-transform: uppercase; margin-top: 3px; }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="numero-18">18</div>
+        <div class="eighteen">eighteen</div>
+
+        <p class="subtitle">Sei invitato al mio compleanno</p>
+        <h1 class="nome">Giuseppe</h1>
+
+        <div class="details-row">
+            <span>APRILE</span>
+            <span class="big-date">2</span>
+            <span>ORE 20:30</span>
+        </div>
+        <p class="year">2026</p>
+
+        <p class="waiting">Aspettando la mezzanotte</p>
+
+        <div class="btn-box">
+            <a href="https://wa.me/393485381053?text=Ciao%20Giuseppe!%20Confermo%20con%20piacere%20la%20mia%20presenza%20per%20il%20tuo%2018esimo!" class="btn">
+                CLICCA QUI
+                <span>per confermare</span>
+            </a>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=JOY+Eventi+San+Giuseppe+Vesuviano+Via+Mattiuli+21" target="_blank" class="btn">
+                CLICCA QUI
+                <span>per la posizione</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
