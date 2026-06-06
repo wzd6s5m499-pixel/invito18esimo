@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marika's 18th Birthday - Tropical Luxury</title>
+    <title>Marika's 18th Birthday</title>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body, html { 
             margin: 0; padding: 0; height: 100%; 
             font-family: 'Montserrat', sans-serif; 
-            background-color: #061e14; 
+            background-color: #04140e; 
             color: #f4eae1;
             display: flex; justify-content: center; align-items: center;
             overflow: hidden;
         }
         
-        /* Contenitore con lo sfondo lussuoso verde scuro giungla della foto */
+        /* Sfondo profondo, lussuoso e sfumato (NIENTE LINK ESTERNI CHE SI ROMPONO) */
         .wrapper {
             width: 100%;
             max-width: 450px;
@@ -28,77 +28,53 @@
             position: relative;
             padding: 40px 25px;
             box-sizing: border-box;
-            background: radial-gradient(circle at 50% 40%, #0c3624 0%, #04140e 80%);
-            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            background: radial-gradient(circle at 50% 35%, #0a3321 0%, #03120c 85%);
         }
 
-        /* Elementi Tropicali Realistici e lussuosi agli angoli (Foglie e Fiori esotici della foto) */
-        .tropical-deco {
-            position: absolute;
-            background-size: contain;
-            background-repeat: no-repeat;
-            pointer-events: none;
-            z-index: 1;
-        }
-        /* Angolo alto destro: Foglie di Palma, Monstera e Fiore Arancione */
-        .top-right {
-            top: 0; right: 0; width: 160px; height: 180px;
-            background-image: url('https://i.ibb.co/L5rK5qy/top-right-tropical.png'), 
-                              linear-gradient(135deg, rgba(218,165,32,0.1), transparent);
-            filter: drop-shadow(-5px 5px 10px rgba(0,0,0,0.5));
-        }
-        /* Angolo alto sinistro: Monstera scura ed elegante */
-        .top-left {
-            top: -10px; left: -10px; width: 110px; height: 110px;
-            background-image: url('https://i.ibb.co/D8G3s9c/monstera-left.png');
-            opacity: 0.7;
-        }
-        /* Angolo basso destro: Ibisco Rosa e Foglie esotiche */
-        .bottom-right {
-            bottom: 0; right: 0; width: 150px; height: 150px;
-            background-image: url('https://i.ibb.co/27B66pX/hibiscus-bottom.png');
-            filter: drop-shadow(-2px -2px 8px rgba(0,0,0,0.4));
-        }
-        /* Angolo basso sinistro: Uccello del paradiso arancione e foglie dense */
-        .bottom-left {
-            bottom: 0; left: 0; width: 130px; height: 160px;
-            background-image: url('https://i.ibb.co/zH40wM4/bottom-left-paradise.png');
-        }
+        /* Elementi tropicali eleganti generati via codice */
+        .deco { position: absolute; font-size: 45px; opacity: 0.85; z-index: 1; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); }
+        .t1 { top: 3%; right: 5%; transform: rotate(15deg); font-size: 50px; } /* Uccello del paradiso in alto a destra */
+        .t2 { top: 4%; left: 5%; transform: rotate(-10deg); }
+        .t3 { bottom: 18%; left: 4%; transform: rotate(-20deg); }
+        .t4 { bottom: 18%; right: 4%; transform: rotate(20deg); }
+        
+        /* Foglie giganti di sfondo soffuse */
+        .palm-bg { position: absolute; font-size: 110px; opacity: 0.12; z-index: 0; pointer-events: none; }
+        .p1 { top: 20%; left: -30px; transform: rotate(45deg); }
+        .p2 { bottom: 25%; right: -30px; transform: rotate(-45deg); }
 
         .content { position: relative; z-index: 2; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
 
-        /* Scritta 'eighteen' in corsivo dorato sottile */
         .eighteen { 
             font-family: 'Pinyon Script', cursive;
-            font-size: 52px;
+            font-size: 55px;
             color: #e5b842;
-            margin-top: 10px;
+            margin-top: 15px;
             margin-bottom: 0;
-            letter-spacing: 1px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
 
         .subtitle { 
-            font-size: 13px;
+            font-size: 12px;
             letter-spacing: 3px;
             text-transform: uppercase;
             margin-top: 5px;
-            margin-bottom: 15px;
-            color: #d1c7bd;
+            margin-bottom: 0;
+            color: #bfae9e;
             font-weight: 300;
         }
         
-        /* Nome MARIKA'S BIRTHDAY - Con il fantastico effetto sfumato neon dorato/arancio della foto */
-        .nome-box { margin: 10px 0 20px 0; position: relative; }
+        /* Scritta Marika's Birthday con l'effetto sfumato dorato e arancio della foto */
+        .nome-box { margin: 15px 0; }
         .nome { 
             font-family: 'Pinyon Script', cursive;
-            font-size: 78px;
-            line-height: 0.95;
+            font-size: 82px;
+            line-height: 0.9;
             margin: 0;
             background: linear-gradient(to right, #ffb347, #ffcc33, #ff8c00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 12px rgba(255,140,0,0.55)) drop-shadow(0 2px 3px rgba(0,0,0,0.6));
+            filter: drop-shadow(0 0 15px rgba(255,140,0,0.6));
         }
         .birthday-tag {
             font-size: 11px;
@@ -106,57 +82,59 @@
             text-transform: uppercase;
             letter-spacing: 7px;
             color: #e5b842;
-            margin-top: 2px;
+            margin-top: 5px;
             display: block;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
-        /* Blocco Data con righe orizzontali d'oro come nel modello richiesto */
+        /* Linee orizzontali sottili per la data */
         .date-container { 
             display: flex; align-items: center; justify-content: center; gap: 20px;
             width: 85%; margin: 0 auto;
-            border-top: 1px solid rgba(229,184,66,0.35);
-            border-bottom: 1px solid rgba(229,184,66,0.35);
-            padding: 10px 0;
+            border-top: 1px solid rgba(229,184,66,0.3);
+            border-bottom: 1px solid rgba(229,184,66,0.3);
+            padding: 12px 0;
         }
-        .date-container span { font-size: 14px; letter-spacing: 3px; font-weight: 400; color: #f4eae1; }
-        .big-day { font-size: 38px; color: #e5b842; font-weight: 300; line-height: 1; }
+        .date-container span { font-size: 14px; letter-spacing: 3px; color: #f4eae1; }
+        .big-day { font-size: 40px; color: #e5b842; font-weight: 300; line-height: 1; }
 
-        .divider { width: 40px; height: 1px; background: rgba(229,184,66,0.3); margin: 20px auto; }
+        .divider { width: 35px; height: 1px; background: rgba(229,184,66,0.25); margin: 25px auto; }
 
         .info-text { font-size: 13.5px; letter-spacing: 1.5px; color: #f4eae1; margin: 8px 0; }
         .info-text b { color: #e5b842; font-weight: 600; }
 
-        /* Pulsanti Interattivi Luminosi e sagomati con contorno sfumato (esattamente come nella foto) */
+        /* Pulsanti d'oro con sfondo scuro trasparente come nel modello, posizionati sopra il taglio dello schermo */
         .btn-container { 
-            display: flex; gap: 15px; width: 100%; margin-top: auto; padding-top: 20px;
+            display: flex; gap: 15px; width: 100%; margin-top: auto; padding-bottom: 5px;
         }
         .btn {
             flex: 1;
             padding: 16px 5px;
             border-radius: 8px;
-            background: linear-gradient(135deg, rgba(30,20,10,0.4) 0%, rgba(10,5,2,0.6) 100%);
+            background: rgba(10, 25, 18, 0.6);
             border: 1px solid #e5b842;
             color: #e5b842;
             text-decoration: none;
-            font-size: 10.5px;
+            font-size: 11px;
             letter-spacing: 2px;
             font-weight: 700;
             text-transform: uppercase;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4), inset 0 0 10px rgba(229,184,66,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             transition: all 0.2s ease;
         }
-        .btn span { display: block; font-size: 8px; font-weight: 300; text-transform: lowercase; opacity: 0.8; margin-top: 3px; color: #f4eae1; letter-spacing: 1px; }
-        .btn:active { transform: scale(0.97); background: rgba(229,184,66,0.15); }
+        .btn span { display: block; font-size: 8px; font-weight: 300; text-transform: lowercase; opacity: 0.8; margin-top: 3px; color: #f4eae1; }
+        .btn:active { transform: scale(0.97); background: rgba(229,184,66,0.1); }
     </style>
 </head>
 <body>
 
     <div class="wrapper">
-        <div class="tropical-deco top-right"></div>
-        <div class="tropical-deco top-left"></div>
-        <div class="tropical-deco bottom-right"></div>
-        <div class="tropical-deco bottom-left"></div>
+        <div class="deco t1">🪻</div>
+        <div class="deco t2">🌿</div>
+        <div class="deco t3">🌺</div>
+        <div class="deco t4">🍃</div>
+        
+        <div class="palm-bg p1">🌴</div>
+        <div class="palm-bg p2">🌿</div>
 
         <div class="content">
             <div>
@@ -183,11 +161,11 @@
             </div>
 
             <div class="btn-container">
-                <a href="https://wa.me/393668101927?text=Ciao%20Marika!%20Confermo%20con%20enorme%20piacere%20la%20mia%20presenza%20per%20il%20tuo%2018esimo!" class="btn">
+                <a href="https://wa.me/393668101927?text=Ciao%20Marika!%20Confermo%20con%20piacere%20la%20mia%20presenza!" class="btn">
                     Clicca qui
                     <span>per confermare</span>
                 </a>
-                <a href="http://googleusercontent.com/maps.google.com/2" target="_blank" class="btn">
+                <a href="http://googleusercontent.com/maps.google.com/3" target="_blank" class="btn">
                     Clicca qui
                     <span>per la posizione</span>
                 </a>
