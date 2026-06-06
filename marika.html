@@ -3,183 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marika's Birthday - Tropical Party</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Marika's 18th Birthday - Tropical Luxury</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body, html { 
             margin: 0; padding: 0; height: 100%; 
             font-family: 'Montserrat', sans-serif; 
-            background: #00b4d8; /* Azzurro base */
-            overflow: hidden;
+            background-color: #061e14; 
+            color: #f4eae1;
             display: flex; justify-content: center; align-items: center;
+            overflow: hidden;
         }
         
-        /* Sfondo Hawaiano - Sfumatura Cielo, Sole e Mare */
+        /* Contenitore con lo sfondo lussuoso verde scuro giungla della foto */
         .wrapper {
             width: 100%;
             max-width: 450px;
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Centra tutto senza spazi vuoti enormi */
+            justify-content: space-between;
             align-items: center;
             text-align: center;
             position: relative;
-            padding: 20px;
+            padding: 40px 25px;
             box-sizing: border-box;
-            background: linear-gradient(180deg, #ff99c8 0%, #fcf6bd 35%, #d0f4de 65%, #a9def9 100%);
+            background: radial-gradient(circle at 50% 40%, #0c3624 0%, #04140e 80%);
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
         }
 
-        /* Decorazioni Tropicali Colorate (CSS purissimo) */
-        .flower { position: absolute; font-size: 40px; opacity: 0.8; z-index: 0; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1)); }
-        .f1 { top: 5%; left: 5%; color: #ff0a54; transform: rotate(-15deg); } /* Rosa Ibisco */
-        .f2 { top: 15%; right: 8%; color: #ff70a6; transform: rotate(20deg); }
-        .f3 { bottom: 10%; left: 10%; color: #ff9770; transform: rotate(-25deg); } /* Arancio */
-        .f4 { bottom: 20%; right: 5%; color: #70d6ff; transform: rotate(10deg); } /* Azzurro */
-        .leaf { position: absolute; font-size: 60px; color: #2d6a4f; opacity: 0.2; z-index: 0; }
-        .l1 { top: 30%; left: -10px; }
-        .l2 { bottom: 30%; right: -10px; }
-
-        .content { position: relative; z-index: 2; width: 100%; }
-
-        .badge {
-            font-size: 12px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: #d00000; /* Rosso ibisco */
-            margin-bottom: 10px;
-            font-weight: 700;
+        /* Elementi Tropicali Realistici e lussuosi agli angoli (Foglie e Fiori esotici della foto) */
+        .tropical-deco {
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            z-index: 1;
+        }
+        /* Angolo alto destro: Foglie di Palma, Monstera e Fiore Arancione */
+        .top-right {
+            top: 0; right: 0; width: 160px; height: 180px;
+            background-image: url('https://i.ibb.co/L5rK5qy/top-right-tropical.png'), 
+                              linear-gradient(135deg, rgba(218,165,32,0.1), transparent);
+            filter: drop-shadow(-5px 5px 10px rgba(0,0,0,0.5));
+        }
+        /* Angolo alto sinistro: Monstera scura ed elegante */
+        .top-left {
+            top: -10px; left: -10px; width: 110px; height: 110px;
+            background-image: url('https://i.ibb.co/D8G3s9c/monstera-left.png');
+            opacity: 0.7;
+        }
+        /* Angolo basso destro: Ibisco Rosa e Foglie esotiche */
+        .bottom-right {
+            bottom: 0; right: 0; width: 150px; height: 150px;
+            background-image: url('https://i.ibb.co/27B66pX/hibiscus-bottom.png');
+            filter: drop-shadow(-2px -2px 8px rgba(0,0,0,0.4));
+        }
+        /* Angolo basso sinistro: Uccello del paradiso arancione e foglie dense */
+        .bottom-left {
+            bottom: 0; left: 0; width: 130px; height: 160px;
+            background-image: url('https://i.ibb.co/zH40wM4/bottom-left-paradise.png');
         }
 
+        .content { position: relative; z-index: 2; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+
+        /* Scritta 'eighteen' in corsivo dorato sottile */
         .eighteen { 
             font-family: 'Pinyon Script', cursive;
-            font-size: 65px;
-            color: #fb8500; /* Arancio Giallo */
-            margin: 0;
-            text-shadow: 2px 2px 0px rgba(255,255,255,0.8);
+            font-size: 52px;
+            color: #e5b842;
+            margin-top: 10px;
+            margin-bottom: 0;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .subtitle { 
             font-size: 13px;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            margin: 15px 0;
-            color: #333;
-            font-weight: 400;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            color: #d1c7bd;
+            font-weight: 300;
         }
         
-        /* Marika's Birthday - Scritta Elegante e Colorata */
-        .nome-container { margin-bottom: 30px; }
+        /* Nome MARIKA'S BIRTHDAY - Con il fantastico effetto sfumato neon dorato/arancio della foto */
+        .nome-box { margin: 10px 0 20px 0; position: relative; }
         .nome { 
             font-family: 'Pinyon Script', cursive;
-            font-size: 65px;
-            line-height: 1;
+            font-size: 78px;
+            line-height: 0.95;
             margin: 0;
-            background: linear-gradient(to right, #ff0054, #ff5400);
+            background: linear-gradient(to right, #ffb347, #ffcc33, #ff8c00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 2px 2px rgba(255,255,255,1));
+            filter: drop-shadow(0 0 12px rgba(255,140,0,0.55)) drop-shadow(0 2px 3px rgba(0,0,0,0.6));
         }
-        .birthday-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
+        .birthday-tag {
+            font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 6px;
-            color: #0077b6;
-            margin-top: -5px;
+            letter-spacing: 7px;
+            color: #e5b842;
+            margin-top: 2px;
             display: block;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
-        /* Dettagli armoniosi */
-        .details { 
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(5px);
-            border-radius: 20px;
-            padding: 15px;
-            width: 85%;
-            margin: 0 auto;
-            border: 2px solid white;
+        /* Blocco Data con righe orizzontali d'oro come nel modello richiesto */
+        .date-container { 
+            display: flex; align-items: center; justify-content: center; gap: 20px;
+            width: 85%; margin: 0 auto;
+            border-top: 1px solid rgba(229,184,66,0.35);
+            border-bottom: 1px solid rgba(229,184,66,0.35);
+            padding: 10px 0;
         }
-        
-        .date-row { display: flex; align-items: center; justify-content: center; gap: 15px; }
-        .date-row span { font-size: 18px; font-weight: 700; color: #d00000; }
-        .big-number { font-size: 45px; color: #fb8500; }
+        .date-container span { font-size: 14px; letter-spacing: 3px; font-weight: 400; color: #f4eae1; }
+        .big-day { font-size: 38px; color: #e5b842; font-weight: 300; line-height: 1; }
 
-        .info { margin-top: 20px; font-size: 14px; color: #333; }
-        .info p { margin: 5px 0; }
-        .info b { color: #ff0054; text-transform: uppercase; }
+        .divider { width: 40px; height: 1px; background: rgba(229,184,66,0.3); margin: 20px auto; }
 
-        /* Bottoni più alti e colorati */
-        .btn-box { 
-            display: flex; flex-direction: column; 
-            gap: 12px; width: 85%; 
-            margin-top: 30px; /* Portati più in alto */
+        .info-text { font-size: 13.5px; letter-spacing: 1.5px; color: #f4eae1; margin: 8px 0; }
+        .info-text b { color: #e5b842; font-weight: 600; }
+
+        /* Pulsanti Interattivi Luminosi e sagomati con contorno sfumato (esattamente come nella foto) */
+        .btn-container { 
+            display: flex; gap: 15px; width: 100%; margin-top: auto; padding-top: 20px;
         }
-
         .btn {
-            padding: 15px;
-            border-radius: 50px;
+            flex: 1;
+            padding: 16px 5px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(30,20,10,0.4) 0%, rgba(10,5,2,0.6) 100%);
+            border: 1px solid #e5b842;
+            color: #e5b842;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 10.5px;
+            letter-spacing: 2px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: 0.3s;
-            border: 2px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4), inset 0 0 10px rgba(229,184,66,0.2);
+            transition: all 0.2s ease;
         }
-        
-        .btn-confirm { background: #ff0054; color: white; } /* Rosa */
-        .btn-map { background: #00b4d8; color: white; } /* Azzurro */
-        
-        .btn:active { transform: scale(0.95); }
-
+        .btn span { display: block; font-size: 8px; font-weight: 300; text-transform: lowercase; opacity: 0.8; margin-top: 3px; color: #f4eae1; letter-spacing: 1px; }
+        .btn:active { transform: scale(0.97); background: rgba(229,184,66,0.15); }
     </style>
 </head>
 <body>
 
     <div class="wrapper">
-        <div class="flower f1">🌺</div>
-        <div class="flower f2">🌸</div>
-        <div class="flower f3">🌼</div>
-        <div class="flower f4">🏝️</div>
-        <div class="leaf l1">🌿</div>
-        <div class="leaf l2">🍃</div>
+        <div class="tropical-deco top-right"></div>
+        <div class="tropical-deco top-left"></div>
+        <div class="tropical-deco bottom-right"></div>
+        <div class="tropical-deco bottom-left"></div>
 
         <div class="content">
-            <div class="badge">Tropical Party</div>
-            <div class="eighteen">Eighteen</div>
-
-            <p class="subtitle">Sei invitata al</p>
+            <div>
+                <div class="eighteen">eighteen</div>
+                <p class="subtitle">Sei invitata al mio compleanno</p>
+            </div>
             
-            <div class="nome-container">
+            <div class="nome-box">
                 <h1 class="nome">Marika's</h1>
-                <span class="birthday-text">Birthday</span>
+                <span class="birthday-tag">Birthday</span>
             </div>
 
-            <div class="details">
-                <div class="date-row">
+            <div>
+                <div class="date-container">
                     <span>LUGLIO</span>
-                    <span class="big-number">8</span>
+                    <span class="big-day">8</span>
                     <span>ORE 20:30</span>
                 </div>
-                <div class="info">
-                    <p><b>Dress Code:</b> No Nero No Bianco</p>
-                    <p><b>Tema:</b> Hawaiian Chic</p>
-                </div>
+
+                <div class="divider"></div>
+
+                <div class="info-text">Dress Code: <b>No Nero No Bianco</b></div>
+                <div class="info-text">Tema: <b>Tropical</b></div>
             </div>
 
-            <center>
-            <div class="btn-box">
-                <a href="https://wa.me/393668101927?text=Ciao%20Marika!%20Confermo%20con%20piacere%20la%20mia%20presenza!" class="btn btn-confirm">
-                    Conferma Presenza
+            <div class="btn-container">
+                <a href="https://wa.me/393668101927?text=Ciao%20Marika!%20Confermo%20con%20enorme%20piacere%20la%20mia%20presenza%20per%20il%20tuo%2018esimo!" class="btn">
+                    Clicca qui
+                    <span>per confermare</span>
                 </a>
-                <a href="https://maps.app.goo.gl/hwWsaFW3maXfQHjH9?g_st=ic" target="_blank" class="btn btn-map">
-                    Posizione Locale
+                <a href="http://googleusercontent.com/maps.google.com/2" target="_blank" class="btn">
+                    Clicca qui
+                    <span>per la posizione</span>
                 </a>
             </div>
-            </center>
         </div>
     </div>
 
